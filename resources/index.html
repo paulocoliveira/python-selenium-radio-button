@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Button By ID Example</title>
+</head>
+<body>
+    <h3>Select an Environment:</h3>
+    
+    <!-- Radio button with an 'id' attribute -->
+    <input type="radio" id="tst-env" name="environment" value="tst">
+    <label for="tst-env">TST</label><br>
+
+    <input type="radio" id="stg-env" name="environment" value="stg">
+    <label for="stg-env">STG</label><br>
+
+    <input type="radio" id="prd-environment" name="environment" value="prd">
+    <label for="prd-env">PRD</label><br>
+
+    <!-- Hidden radio button -->
+    <input type="radio" id="hidden-env" name="environment" value="hidden" style="display: none;">
+    <label for="hidden-env" style="display: none;">Hidden</label><br>
+
+    <!-- Button to toggle visibility -->
+    <button id="toggle-hidden" onclick="toggleHiddenOption()">Toggle Hidden Option</button>
+
+    <script>
+        function toggleHiddenOption() {
+            var hiddenOption = document.getElementById("hidden-env");
+            var hiddenLabel = document.querySelector('label[for="hidden-env"]');
+            
+            if (hiddenOption.style.display === "none") {
+                hiddenOption.style.display = "inline-block";
+                hiddenLabel.style.display = "inline-block";
+            } else {
+                hiddenOption.style.display = "none";
+                hiddenLabel.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
