@@ -26,19 +26,14 @@ As a prerequisite for this code, you need:
 
 3. Open the project in Visual Studio Code
 
-4. Enter in the cloud-grid folder
-```bash
-cd cloud-grid
-```
-
-5. Install pytest, and Selenium WebDriver libraries
+4. Install pytest, and Selenium WebDriver libraries
 ```bash
 pip install -r requirements.txt
 ```
 
-In order to run this cloud grid sample, please run the command below in the project folder:
+5. In order to run this cloud grid sample, please run the command below in the project folder:
 ```bash
-pytest
+pytest -s
 ```
 
 ## :writing_hand: Blog Link
