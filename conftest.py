@@ -29,7 +29,7 @@ def driver():
         "browserName": browser_name,
         "browserVersion": config.get('CLOUDGRID', 'browser_version'),
         "selenium_version": config.get('CLOUDGRID', 'selenium_version'),
-        "tunnel": True
+        "visual": config.get('CLOUDGRID', 'visual')
     }
 
     options = web_driver
@@ -44,5 +44,4 @@ def driver():
 
     yield driver
 
-    # Close the WebDriver
-    driver.quit()
+    driver.quit
